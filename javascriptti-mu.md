@@ -138,19 +138,12 @@ for \(var i = 0; i &lt; this.length; i++\){
 
         if \(this\[i\] === this\[j\]\) {
 
-            ret.push\(this.splice\(j, 1\)\[0\]\);  // 此时j不需要加1，splice自然会改变原数组
-// 因为splice返回的是包含删除元素的数组,加个[0]把删除的元素取出来，然后push到ret中
-//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。
+            ret.push\(this.splice\(j, 1\)\[0\]\);  // 此时j不需要加1，splice自然会改变原数组// 因为splice返回的是包含删除元素的数组,加个[0]把删除的元素取出来，然后push到ret中//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。
         } else {
-
             j++;
-
         }
-
     }
-
  }
-
  return ret;
 }
 
