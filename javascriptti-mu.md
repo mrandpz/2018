@@ -156,7 +156,7 @@ console.log([2,2,23,4,5,3,2,32,5,5,5].distinct());
 `function mySort() {`
 
 ```
-var tags = new Array\(\);//使用数组作为参数存储容器
+var tags = new Array();//使用数组作为参数存储容器
 
 请补充你的代码
 
