@@ -67,15 +67,11 @@ function LazyMan(name){
     return new _LazyMan(name);
 }
 LazyMan('jack')
-
-
 ```
 
 2.jquery ajax中都支持哪些数据类型？
 
 通过dataType选项还可以指定其他不同数据处理方式。除了单纯的XML，还可以指定 html、json、jsonp、script或者text。
-
-
 
 3.常见的浏览器端的存储技术有哪些
 
@@ -132,9 +128,8 @@ typeof六种返回格式：'string'  'number'  'object'  'function'  'boolean'  
 
 5.请给Array本地对象增加一个原型方法，它用于删除数组条目中重复的条目\(可能有多个\)，返回值是一个包含被删除的重复条目的新数组。
 
-Array.prototype.distinct = function\(\) {
-
 ```
+Array.prototype.distinct = function() {
 var ret = \[\];
 
 for \(var i = 0; i &lt; this.length; i++\){
@@ -144,13 +139,8 @@ for \(var i = 0; i &lt; this.length; i++\){
         if \(this\[i\] === this\[j\]\) {
 
             ret.push\(this.splice\(j, 1\)\[0\]\);  // 此时j不需要加1，splice自然会改变原数组
-```
-
-`// 因为splice返回的是包含删除元素的数组,加个[0]把删除的元素取出来，然后push到ret中`
-
-`//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。`
-
-```
+// 因为splice返回的是包含删除元素的数组,加个[0]把删除的元素取出来，然后push到ret中
+//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。
         } else {
 
             j++;
@@ -162,13 +152,11 @@ for \(var i = 0; i &lt; this.length; i++\){
  }
 
  return ret;
-```
-
 }
 
 //for test
-
-console.log\(\[2,2,23,4,5,3,2,32,5,5,5\].distinct\(\)\);
+console.log([2,2,23,4,5,3,2,32,5,5,5].distinct());
+```
 
 6.请填充代码，使mySort\(\)能使传入的参数按照从小到大的顺序显示出来。
 
