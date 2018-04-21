@@ -130,15 +130,15 @@ typeof六种返回格式：'string'  'number'  'object'  'function'  'boolean'  
 
 ```
 Array.prototype.distinct = function() {
-var ret = \[\];
+var ret = [];
 
-for \(var i = 0; i &lt; this.length; i++\){
+for (var i = 0; i &lt; this.length; i++){
 
-    for \(var j = i+1; j &lt; this.length;\) {   
+    for (var j = i+1; j &lt; this.length;) {   
 
-        if \(this\[i\] === this\[j\]\) {
+        if (this[i] === this[j]) {
 
-            ret.push\(this.splice\(j, 1\)\[0\]\);  // 此时j不需要加1，splice自然会改变原数组// 因为splice返回的是包含删除元素的数组,加个[0]把删除的元素取出来，然后push到ret中//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。
+            ret.push(this.splice(j, 1)[0]);  // 此时j不需要加1，splice自然会改变原数组// 因为splice返回的是包含删除元素的数组,加个[0]把删除的元素取出来，然后push到ret中//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。
         } else {
             j++;
         }
