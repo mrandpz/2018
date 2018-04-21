@@ -127,25 +127,99 @@ typeof六种返回格式：'string'  'number'  'object'  'function'  'boolean'  
 
 5.请给Array本地对象增加一个原型方法，它用于删除数组条目中重复的条目\(可能有多个\)，返回值是一个包含被删除的重复条目的新数组。
 
-```
-Array.prototype.distinct = function() {
-    var ret = [];
-    for (var i = 0; i < this.length; i++){
-        for (var j = i+1; j < this.length;) {   
-            if (this[i] === this[j]) {
-                ret.push(this.splice(j, 1)[0]);  // 此时j不需要加1，splice自然会改变原数组
-// 因为splice返回的是包含删除元素的数组,加个[0]把删除的元素取出来，然后push到ret中  
-//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。
+Array.prototype.distinct = function\(\) {
+
+    var ret = \[\];
+
+    for \(var i = 0; i &lt; this.length; i++\){
+
+        for \(var j = i+1; j &lt; this.length;\) {   
+
+            if \(this\[i\] === this\[j\]\) {
+
+                ret.push\(this.splice\(j, 1\)\[0\]\);  // 此时j不需要加1，splice自然会改变原数组
+
+// 因为splice返回的是包含删除元素的数组,加个\[0\]把删除的元素取出来，然后push到ret中  
+
+//slice方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice\(\)。
+
             } else {
+
                 j++;
+
             }
+
         }
+
      }
+
      return ret;
+
 }
+
 //for test
-console.log([2,2,23,4,5,3,2,32,5,5,5].distinct());
+
+console.log\(\[2,2,23,4,5,3,2,32,5,5,5\].distinct\(\)\);
+
+6.请填充代码，使mySort\(\)能使传入的参数按照从小到大的顺序显示出来。
+
+function mySort\(\) {
+
+    var tags = new Array\(\);//使用数组作为参数存储容器
+
+    请补充你的代码
+
+    return tags;//返回已经排序的数组
+
+}
+
+ 
+
+var result = mySort\(50,11,16,32,24,99,57,100\);/传入参数个数不确定
+
+console.info\(result\);//显示结果
+
+`function mySort() { `
+
+`    var tags = new Array();//使用数组作为参数存储容器 `
+
+`    tags = Array.prototype.slice.call(arguments) `
+
+`    tags.sort(function(pre,next){`
+
+`        return pre - next;`
+
+`    }) `
+
+`    return tags;//返回已经排序的数组 `
+
+`} `
+
+7.JS 实现登陆验证 javascript:return checkSubmit\(\)
+
 ```
+<script language=javascript>
+function checkSubmit()
+{
+    if ((document.form1.name.value)==”)
+    {
+        window.alert (‘姓名必须填写’);
+        document.form1.name.select();
+        document.form1.name.focus();
+        return false;
+    }
+    else
+        return true;
+}
+</script>
+<form name=”form1″ onsubmit=”javascript:return checkSubmit()”>
+<input type=”text” name=”name”>
+</form>
+```
+
+
+
+
 
 
 
