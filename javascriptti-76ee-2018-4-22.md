@@ -19,14 +19,14 @@ alert(b);
 var a,b;
 (function(){
     var a = b;
-    alert(a);
-    alert(b);
+    alert(a); //undefined
+    alert(b); //undefined
     b=3;  // b是全局变量
-    alert(a);
-    alert(b);
+    alert(a); //undefined
+    alert(b);  // 3
 })();
-alert(a);
-alert(b);
+alert(a); //undefined，undefined
+alert(b); //undefined
 ```
 
 
