@@ -5,4 +5,5 @@
 * [JavaScript题目-2018-4-21](javascriptti-mu.md)
 * [JavaScript题目-2018-4-22](javascriptti-76ee-2018-4-22.md)
 * [JavaScript题目-2018-4-23](javascriptti-76ee-2018-4-23.md)
+* [JS 常见基础算法](js-chang-jian-ji-chu-suan-fa.md)
 
