@@ -4,24 +4,24 @@
 
 ```js
 var addEven = function (ele,type,fn,isCapture) {
-	if (window.addEventListener) {
-		ele.addEventListener(type,fn,isCapture)
-	}else if(window.attachEvent){
-		ele.attachEvent("on"+type,fn)
-	}
+    if (window.addEventListener) {
+        ele.addEventListener(type,fn,isCapture)
+    }else if(window.attachEvent){
+        ele.attachEvent("on"+type,fn)
+    }
 }
 
 // best
 var addEven = (function (ele,type,fn,isCapture) {
-	if (window.addEventListener) {
-		return function(ele, type, fn, isCapture) {
+    if (window.addEventListener) {
+        return function(ele, type, fn, isCapture) {
             ele.addEventListener(type, fn, isCapture)
         }
-	}else if(window.attachEvent){
-		return function(ele, type, fn) {
+    }else if(window.attachEvent){
+        return function(ele, type, fn) {
              ele.attachEvent("on" + type, fn)
         }
-	}
+    }
 })()
 ```
 
@@ -33,7 +33,7 @@ var addEven = (function (ele,type,fn,isCapture) {
 
 这就是柯里化函数的基本用法 – 提前返回**和**延迟执行，但是这里没有利用到柯里化参数复用的特点，接下来我们继续分析防抖和节流。
 
-2. 防抖和节流，在scoll，resize，mousemove 事件中
+1. 防抖和节流，在scoll，resize，mousemove 事件中
 
 ##### 防抖（Debouncing）
 
