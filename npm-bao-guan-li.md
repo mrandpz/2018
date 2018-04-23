@@ -13,11 +13,7 @@ npm unstall xxx 卸载
 * npm whoami  检查是否登陆
 * 建立package，npm init 输入包名，也就是发布上去别人要下载的包名等一些东西
 * 写下index.js 
-* npm publish
-
-
-
-
+* npm publish 发布
 
 
 
