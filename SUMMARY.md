@@ -5,5 +5,6 @@
 * [JavaScript题目-2018-4-21](javascriptti-mu.md)
 * [JavaScript题目-2018-4-22](javascriptti-76ee-2018-4-22.md)
 * [JavaScript题目-2018-4-23-函数柯里化的三个应用](han-shu-ke-li-hua-de-san-ge-ying-yong.md)
-* [npm 包管理 ](npm-bao-guan-li.md)
+* [JavaScript-2018-4-24-npm 包管理 ](npm-bao-guan-li.md)
+* [JavaScript-2018-4-25-webpack 入门](javascript-2018-4-24-webpack-ru-men.md)
 
