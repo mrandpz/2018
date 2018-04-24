@@ -17,7 +17,7 @@ npm unstall xxx 卸载
 * 写下index.js 
 * npm publish 发布 =》 此时需要点开注册的邮箱去做校验，才能发布，如果你以后修改了代码，然后想要同步到 npm 上的话请修改 package.json 中的 version 然后再次 publish，更新的版本上传的版本要大于上次
 * nrm 切换npm源的工具 nrm ls 显示出所有的源 nvm use切换源
-* 发现不合适，npm uninstall 包名 --force
+* 发现不合适，npm unpublish 包名 --force
 
 
 
