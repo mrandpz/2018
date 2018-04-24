@@ -1,5 +1,7 @@
 npm =&gt; Node Package Manager 包管理工具  账号xiaomengzhi1992
 
+核心项目的核心代码整成npm包
+
 切换nodejs的版本 nvm
 
 npm install xxx 安装
