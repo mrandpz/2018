@@ -19,6 +19,7 @@ npm unstall xxx 卸载
 * nrm 切换npm源的工具 nrm ls 显示出所有的源 nvm use切换源
 * 想撤销发布的包，npm unpublish 包名 --force
 * 发布版本  npm version 0.1.2  patch代表补丁2   minor代表小修小改1  major代表大版本0，最后publish发布到远端，查看远端版本npm view xiaomengzhi1992 versions
+* npm update xiaomengzhi --save 更新模块
 
 
 
