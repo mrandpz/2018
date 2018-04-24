@@ -22,6 +22,8 @@ npm unstall xxx 卸载
 * npm update xiaomengzhi --save 更新模块
 * 清楚缓存  npm cache clean --force
 * 更新模块 npm install xiaomengzhi1992 --save  或者 npm update xiaomengzhi1992 --save
+* 测试自己的包名能不能发布： npm install packageName  如报错则不能命名
+
 * 
 
 
