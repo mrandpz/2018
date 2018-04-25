@@ -22,5 +22,11 @@ lessc index.less index.css --clean-css="advanced" 压缩
 @import 某某文件
 ```
 
-5.
+5. 压缩js
+
+```
+uglifyjs index.js -m(压缩) -o(混淆) index.min.js
+```
+
+
 
