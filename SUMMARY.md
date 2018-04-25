@@ -10,6 +10,6 @@
 * [JavaScript-2018-4-26-配置初始版本的react框架](javascript-2018-4-26pei-zhi-chu-shi-ban-ben-de-react-kuang-jia.md)
 * [JavaScript-2018-4-27-一门css编译语言](javascript-2018-4-28yi-men-css-bian-yi-yu-yan.md)
 * [JavaScript-2018-4-28-基础mysql](javascript-2018-4-28ji-chu-mysql.md)
-* JavaScript-2018.4.29 - 2018-5.1 nodejs 入门
+* [JavaScript-2018.4.29 - 2018-5.1 nodejs 入门](javascript-2018429-2018-51-nodejs-ru-men.md)
 * [JavaScript-2018-5-2-nodejs 写一个爬虫](javascript-2018-5-2-nodejs-xie-yi-ge-pa-chong.md)
 
