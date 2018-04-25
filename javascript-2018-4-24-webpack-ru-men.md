@@ -3,14 +3,8 @@
 2.
 
 * commonjs  nodejs 
-* amd  require
+* amd  require.js
 * cmd seajs
 
 3.
-
-
-
-
-
-
 
