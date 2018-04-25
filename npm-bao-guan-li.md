@@ -23,8 +23,8 @@ npm unstall xxx 卸载
 * 清楚缓存  npm cache clean --force
 * 更新模块 npm install xiaomengzhi1992 --save  或者 npm update xiaomengzhi1992 --save
 * 测试自己的包名能不能发布： npm install packageName  如报错则不能命名
-* npm i --save-dev 安装开发依赖 编译js node环境等
-* npm i --save react 安装生产依赖
+* npm i --save-dev 安装开发依赖 编译js node环境等，不发布
+* npm i --save react 安装生产依赖，发布到线上
 * 
 
 
