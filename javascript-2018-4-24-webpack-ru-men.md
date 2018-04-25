@@ -22,11 +22,11 @@ lessc index.less index.css --clean-css="advanced" 压缩
 @import 某某文件
 ```
 
-1. 压缩js m就是把变量各种简单字母， o则是压缩
+5.压缩js m就是把变量各种简单字母， o则是压缩
 
 ```
 uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 ```
 
-
+6.tiniify 压缩图片，其实就是tinypng 官网注册一个账号使用命令
 
