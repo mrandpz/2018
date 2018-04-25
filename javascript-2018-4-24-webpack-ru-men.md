@@ -22,10 +22,10 @@ lessc index.less index.css --clean-css="advanced" 压缩
 @import 某某文件
 ```
 
-5. 压缩js
+1. 压缩js m就是把变量各种简单字母， o则是压缩
 
 ```
-uglifyjs index.js -m(压缩) -o(混淆) index.min.js
+uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 ```
 
 
