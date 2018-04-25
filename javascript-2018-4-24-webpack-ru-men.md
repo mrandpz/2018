@@ -28,5 +28,7 @@ lessc index.less index.css --clean-css="advanced" 压缩
 uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 ```
 
-6.tiniify 压缩图片，其实就是tinypng 官网注册一个账号使用命令
+6.tinify 压缩图片，其实就是tinypng 官网注册一个账号使用命令,转换成base64，这些都可以用nodejs写成批量处理
+
+7.
 
