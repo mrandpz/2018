@@ -14,7 +14,7 @@
 
 lessc index.less index.css
 
-lessc index.less index.css --clean-css="advanced"
+lessc index.less index.css --clean-css="advanced" 亚索
 
 ```
 @import 某某文件
