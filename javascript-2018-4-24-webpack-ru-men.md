@@ -30,5 +30,16 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 
 6.tinify 压缩图片，其实就是tinypng 官网注册一个账号使用命令,转换成base64，这些都可以用nodejs写成批量处理
 
-7.
+一、认识webpack
+
+* 全局化安装webpack  npm install webpack -g
+* npm init -y
+* cnpm install --save-dev webpack  安装本地webpack依赖
+* 简单输出 webpack 某个文件 输出到某个文件
+
+二、开始建立webpack
+
+* 建立一个 文件名 webpack.config.js
+
+
 
