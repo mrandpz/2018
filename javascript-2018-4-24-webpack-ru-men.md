@@ -46,12 +46,25 @@ module.exports = {
     entry: __dirname + '/src/js/index.js',  // 进口文件
     output:{
         path:__dirname + '/assets/js', // 输出文件
-        filename: 'index.js'
+        filename: 'index.js',
+        publicPath:'/temp/'   // 内存空间
+    },
+    devServer:{
+        contentBase:'./',
+        host:'localhost', //自己的ip地址
+        port:'3333',
+        color:true
     }
 }
 
 输入命令：webpack
 ```
 
+* npm install webpack-dev-server --save-dev   安装本地服务
+* npm install jquery --save  安装依赖库
+
+* 执行命令  webpack-dev-server  启动本地服务
+
+* 
 
 
