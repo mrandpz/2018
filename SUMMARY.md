@@ -7,7 +7,7 @@
 * [JavaScript-2018-4-23-函数柯里化的三个应用](han-shu-ke-li-hua-de-san-ge-ying-yong.md)
 * [JavaScript-2018-4-24-npm 包管理 ](npm-bao-guan-li.md)
 * [JavaScript-2018-4-25-nginx 配置](nginx-pei-zhi.md)
-* [JavaScript-2018-4-26-webpack 入门](javascript-2018-4-24-webpack-ru-men.md)
+* [JavaScript-2018-4-26 28 webpack 入门](javascript-2018-4-24-webpack-ru-men.md)
 * [JavaScript--配置初始版本的react框架](javascript-2018-4-26pei-zhi-chu-shi-ban-ben-de-react-kuang-jia.md)
 * [JavaScript--一门css编译语言](javascript-2018-4-28yi-men-css-bian-yi-yu-yan.md)
 * [JavaScript--基础mysql](javascript-2018-4-28ji-chu-mysql.md)
