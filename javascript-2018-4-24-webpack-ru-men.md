@@ -41,5 +41,17 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 
 * 建立一个 文件名 webpack.config.js
 
+```
+module.exports = {
+	entry: __dirname + '/src/js/index.js',
+	output:{
+		path:__dirname + '/assets/js',
+		filename: 'index.js'
+	}
+}
+
+输入命令：webpack
+```
+
 
 
