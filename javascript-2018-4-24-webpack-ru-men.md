@@ -60,8 +60,14 @@ module.exports = {
         loaders:[
             {
                 test:/\.css$/,
-                loader:'style-loader!css-loader'
-            }
+                loader:'style-loader!css-loader',
+                include: '需要处理的文件',
+                exclude: '忽略的文件'
+            },
+            {
+                test:'/\.json$/',
+                loader:'json'
+            },
         ]
     },
     plugins:[
@@ -81,6 +87,7 @@ module.exports = {
 
 * 加 less-loader  cnpm install less-loader less --save  需要加的loader可以去github看
 
-* 
+* 加json babel 
+
 
 
