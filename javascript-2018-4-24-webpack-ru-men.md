@@ -87,7 +87,12 @@ module.exports = {
 
 * 加 less-loader  cnpm install less-loader less --save  需要加的loader可以去github看
 
-* 加json babel 
+* 加json babel
 
+* npm start  改成 webpack-dev-server ---inline --hot 
+
+* npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
+
+* 
 
 
