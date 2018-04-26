@@ -79,6 +79,7 @@ module.exports = {
 
 * 1、webpack-dev-server ---iFrame  2、webpack-dev-server ---inline 全部  3、webpack-dev-server ---inline --hot 局部刷新，有加hot的话要声明一个插件 new webpack.HotModuleReplacementPlugin\(\)  正常cli都会有自己的热插拔插件
 
-* 
+* 加 less-loader  cnpm install less-loader less --save
+
 
 
