@@ -73,7 +73,91 @@ http {
 }
 
 
-2. 上线的Nginx
+2. 上线的Nginx  hash的情况
+```
+
+```
+server {
+    listen          80;
+    server_name     hlj.rainbowcn.com;
+#    root            /data/wwwroot/oa.gw-ec.com/oa/public;
+    root            /hlj/app/scm;
+#    access_log      logs/oa.gw-ec.com-access.log main buffer=32k;
+
+#      fastcgi_param ENV_TYPE "dev";
+#      fastcgi_param DOMAIN "ifelsend.com";
+    location ~ ^/favicon\.ico$ {
+      log_not_found off;
+      access_log off;
+    }
+    location ~ ^/robots\.txt$ {
+      allow all;
+      log_not_found off;
+      access_log off;
+    }
+
+    location /scm-admin/ {
+#        alias /hlj/app/scm/scm-admin;
+        index   index.html index.php;
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   def_php-fpm;
+#        fastcgi_pass   unix:/hlj/server/php/var/run/www.sock;
+        fastcgi_index  index.php;
+        include        fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param SERVER_NAME $http_host;
+        fastcgi_ignore_client_abort on;
+    }
+
+    location ~ \.(swf|js|css|xml|gif|jpg|jpeg|png|bmp|ico)$ {
+        expires 3d;
+    }
+
+#    location /app_logs/ {
+#        autoindex on;
+#        alias /data/wwwroot/oa.gw-ec.com/oa/logs/;
+#        allow 10.37.0.0/16;
+#        deny  all;
+#    }
+}
+
+
+3 history的情况
+
+
+    server {
+        listen          80;
+        server_name     scm.honglingjin.cn;
+        root            /hlj/app/scm;
+
+        location /scm-app/ {
+            alias /hlj/app/scm/scm-app/;
+            index   index.html index.php;
+#            try_files $uri $uri/ /scm-app/index.html$is_args$args;
+            try_files $uri /scm-app/index.html;
+        }
+
+        location = /favicon.ico {
+            log_not_found off;
+            access_log off;
+        }
+
+        location ~ \.php$ {
+            fastcgi_pass   unix:/dev/shm/php-fpm-5328.sock;
+            fastcgi_index  index.php;
+            include        fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param SERVER_NAME $http_host;
+            fastcgi_ignore_client_abort on;
+        }
+
+#        location ~ \.(swf|js|css|xml|gif|jpg|jpeg|png|bmp|ico)$ {
+#            expires 3d;
+#        }
+    }
 ```
 
 
