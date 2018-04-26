@@ -68,6 +68,14 @@ module.exports = {
                 test:'/\.json$/',
                 loader:'json'
             },
+            {
+                test:/\.js$/,
+                exclude:/node_modules/,
+                loader:'babel',
+                query:{
+                    presets:['es2015','react']
+                }
+            }
         ]
     },
     plugins:[
@@ -89,7 +97,7 @@ module.exports = {
 
 * 加json babel
 
-* npm start  改成 webpack-dev-server ---inline --hot 
+* npm start  改成 webpack-dev-server ---inline --hot
 
 * npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
 
