@@ -42,6 +42,7 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 * 建立一个 文件名 webpack.config.js
 
 ```
+var webpack = require('webpack')
 module.exports = {
     entry: __dirname + '/src/js/index.js',  // 进口文件
     output:{
@@ -54,6 +55,9 @@ module.exports = {
         host:'localhost', //自己的ip地址
         port:'3333',
         color:true
+    },
+    plugins:{
+        new webpack.HotModuleReplacementPlugin
     }
 }
 
@@ -65,6 +69,7 @@ module.exports = {
 
 * 执行命令  webpack-dev-server  启动本地服务
 
-* 
+* 1、webpack-dev-server ---iFrame  2、webpack-dev-server ---inline  3、webpack-dev-server ---inline --hot 局部刷新，有加hot的话要声明一个插件
+
 
 
