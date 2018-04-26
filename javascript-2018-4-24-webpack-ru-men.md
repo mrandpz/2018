@@ -69,7 +69,8 @@ module.exports = {
 
 * 执行命令  webpack-dev-server  启动本地服务
 
-* 1、webpack-dev-server ---iFrame  2、webpack-dev-server ---inline  3、webpack-dev-server ---inline --hot 局部刷新，有加hot的话要声明一个插件
+* 1、webpack-dev-server ---iFrame  2、webpack-dev-server ---inline 全部  3、webpack-dev-server ---inline --hot 局部刷新，有加hot的话要声明一个插件 new webpack.HotModuleReplacementPlugin\(\)  正常cli都会有自己的热插拔插件
 
+* 
 
 
