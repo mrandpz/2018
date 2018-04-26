@@ -8,7 +8,6 @@
 * [JavaScript-2018-4-24-npm 包管理 ](npm-bao-guan-li.md)
 * [JavaScript-2018-4-25.28-webpack 入门](javascript-2018-4-24-webpack-ru-men.md)
 * [JavaScript--一门css编译语言](javascript-2018-4-28yi-men-css-bian-yi-yu-yan.md)
-* [JavaScript- nodejs 入门](javascript-2018429-2018-51-nodejs-ru-men.md)
 * [JavaScript--配置初始版本的react框架](javascript-2018-4-26pei-zhi-chu-shi-ban-ben-de-react-kuang-jia.md)
 * [JavaScript-nodejs 入门](javascript-2018429-2018-51-nodejs-ru-men.md)
 * [JavaScript-nodejs 写一个爬虫](javascript-2018-5-2-nodejs-xie-yi-ge-pa-chong.md)
