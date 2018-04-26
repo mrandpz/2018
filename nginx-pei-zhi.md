@@ -35,11 +35,11 @@ http {
     #gzip  on;
 
     upstream m_localhost{
-        server scm.honglingjin.cn:9090;
+        server scm.honglingjin.cn:9090;  #关键部分，   设置需要代理的接口地址
     }
 
     upstream z_localhost {
-        server 192.168.197.205:9470;
+        server 192.168.197.205:9470;  #关键部分，   设置需要代理的接口地址
     }
     upstream adminapi_localhost {
         server 192.168.197.205:9480;
@@ -49,8 +49,8 @@ http {
     }
 
     server {
-        listen       80;
-        server_name  scm.honglingjin.cn;
+        listen       80;  #真正请求的端口
+        server_name  scm.honglingjin.cn;   #真正请求的域名  
 
         #charset koi8-r;
 
@@ -58,14 +58,14 @@ http {
         location /scm-admin {
             proxy_pass http://admin_localhost;
         }
-        location / {
-            proxy_pass http://m_localhost;
+        location / {   
+            proxy_pass http://m_localhost;  # 当访问scm.honglingjin.cn时，访问的是这个代理前端地址 
         }
 
 
 
         location /scm-app-api { 
-            proxy_pass http://z_localhost;
+            proxy_pass http://z_localhost;  # 当访问scm.honglingjin.cn/scm-app-api时，访问的是这个代理接口地址 
         }
 
         location /scm-admin-api { 
