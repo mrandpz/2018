@@ -43,11 +43,11 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 
 ```
 module.exports = {
-	entry: __dirname + '/src/js/index.js',
-	output:{
-		path:__dirname + '/assets/js',
-		filename: 'index.js'
-	}
+    entry: __dirname + '/src/js/index.js',  // 进口文件
+    output:{
+        path:__dirname + '/assets/js', // 输出文件
+        filename: 'index.js'
+    }
 }
 
 输入命令：webpack
