@@ -12,4 +12,5 @@
 * [JavaScript-2018-4-28-基础mysql](javascript-2018-4-28ji-chu-mysql.md)
 * [JavaScript-2018.4.29 - 2018-5.1 nodejs 入门](javascript-2018429-2018-51-nodejs-ru-men.md)
 * [JavaScript-2018-5-2-nodejs 写一个爬虫](javascript-2018-5-2-nodejs-xie-yi-ge-pa-chong.md)
+* [nginx 配置](nginx-pei-zhi.md)
 
