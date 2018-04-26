@@ -101,6 +101,7 @@ module.exports = {
 
 * npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
 
-* 
+* css 分离 安装  extract-text-webpack-plugin  引入
+
 
 
