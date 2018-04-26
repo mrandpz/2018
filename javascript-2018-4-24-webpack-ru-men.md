@@ -56,6 +56,14 @@ module.exports = {
         port:'3333',
         color:true
     },
+    module:{
+        loaders:[
+            {
+                test:/\.css$/,
+                loader:'style-loader!css-loader'
+            }
+        ]
+    }
     plugins:[
         new webpack.HotModuleReplacementPlugin()
     ]
