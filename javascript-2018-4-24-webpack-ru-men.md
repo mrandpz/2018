@@ -56,9 +56,9 @@ module.exports = {
         port:'3333',
         color:true
     },
-    plugins:{
-        new webpack.HotModuleReplacementPlugin
-    }
+    plugins:[
+        new webpack.HotModuleReplacementPlugin()
+    ]
 }
 
 输入命令：webpack
