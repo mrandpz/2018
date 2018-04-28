@@ -281,7 +281,6 @@ publicPath表示打包文件中引用文件的路径前缀，如果你的图片�
       }
   }
   ```
-
 * html里面的img也需要进行处理，file-loader没处理到
 
 ```
@@ -290,6 +289,10 @@ publicPath表示打包文件中引用文件的路径前缀，如果你的图片�
   loader: "html-loader"
 }
 ```
+
+* 环境变量
+
+
 
 
 
