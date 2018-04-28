@@ -149,7 +149,6 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
       plugins: [
     new extractCSS ("styles.css"),
   ]
-
 ```
 
 * `test`  
@@ -158,6 +157,26 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
   `use`  
   属性，表示进行转换时，应该使用哪个 loader。
 
-* 
+* html-webpack-plugin  生成html文件
+
+```
+{
+  entry: 'index.js',
+  output: {
+    path: __dirname + '/dist',
+    filename: 'index_bundle.js'
+  },
+  plugins: [
+    new HtmlWebpackPlugin(), // Generates default index.html
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      filename: 'test.html',
+      template: 'src/assets/test.html'
+    })
+  ]
+}
+```
+
+
+
 
 
