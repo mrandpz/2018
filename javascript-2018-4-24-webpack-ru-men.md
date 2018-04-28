@@ -181,10 +181,12 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
 
 ```
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
- 
+
 module.exports = {
   plugins: [
-    new UglifyJsPlugin()
+    new UglifyJsPlugin({
+      配置参数
+    })
   ]
 }
 
