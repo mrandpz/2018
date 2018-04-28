@@ -213,9 +213,30 @@ plugins:[
     new webpack.optimize.commonsChunkPlugin('v':'lib/jquery.min.js')
 ]
 
+// 引用cdn方式
+
 extrenals:{
-    jquery:;'cdn' // 引用cdn方式
+    jquery:;'cdn' 
 }
+```
+
+* 有很多入口的时候
+
+```
+entry:{
+    app:'普通js',
+    more:[__dirname+'路径/a.js','路径/b.js'],
+    v:[jquery] //表示从依赖包中加载
+}
+在plugin中
+plugins:[
+    new webpack.ProvidePlugin({
+        $:'jquery'  
+    })
+    new webpack.optimize.commonsChunkPlugin({
+        names:['a','b']
+    })
+]
 ```
 
 
