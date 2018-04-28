@@ -146,6 +146,9 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
           use: "css-loader"
         })
       }
+      plugins: [
+    new extractCSS ("styles.css"),
+  ]
 
 ```
 
