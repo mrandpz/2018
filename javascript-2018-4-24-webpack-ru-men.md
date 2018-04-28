@@ -210,10 +210,9 @@ plugins:[
     new webpack.ProvidePlugin({
         $:'jquery'  
     })
+    new webpack.optimize.commonsChunkPlugin('v':'lib/jquery.min.js')
 ]
 ```
-
-
 
 
 
