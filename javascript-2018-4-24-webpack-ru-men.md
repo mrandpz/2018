@@ -89,6 +89,7 @@ module.exports = {
             }
         ]
     },
+    watch:true, // 监控文件变化
     plugins:[
         new webpack.HotModuleReplacementPlugin()
     ]
@@ -157,7 +158,7 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
   `use`  
   属性，表示进行转换时，应该使用哪个 loader。
 
-* html-webpack-plugin  生成html文件
+* html-webpack-plugin  生成html文件，有设置标题，类似ejs语法等参数
 
 ```
 {
@@ -176,7 +177,7 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
 }
 ```
 
-
+* js  ugli
 
 
 
