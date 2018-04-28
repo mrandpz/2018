@@ -45,6 +45,7 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 ```
 var webpack = require('webpack')
 module.exports = {
+    mode: 'production',  // 环境变量
     entry: __dirname + '/src/js/index.js',  // 进口文件
     output:{
         path:__dirname + '/assets/js', // 输出文件
