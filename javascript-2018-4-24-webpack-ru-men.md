@@ -197,7 +197,7 @@ new webpack.optimize.UglifyJsPlugin({
 })
 ```
 
-* 公共js处理 类似于jquery等
+* 公共js处理 类似于jquery等,加入这个处理后就能够
 
 ```
 entry中引入jquery
@@ -212,6 +212,10 @@ plugins:[
     })
     new webpack.optimize.commonsChunkPlugin('v':'lib/jquery.min.js')
 ]
+
+extrenals:{
+    jquery:;'cdn' // 引用cdn方式
+}
 ```
 
 
