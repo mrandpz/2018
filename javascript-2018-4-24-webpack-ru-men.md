@@ -38,14 +38,17 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 * 简单输出 webpack 某个文件 输出到某个文件
 * 四个核心概念： 1 入口\(entry\) 2输出\(output\) 3 loader 4 插件\(plugins\)
 
-2.entry 的最可扩展配置  
+1.entry 的最可扩展配置   插件`CommonsChunkPlugin`
 
 ```
   entry: {
     app: './src/app.js',
     vendors: './src/vendors.js'
   }
+  
 ```
+
+
 
 二、开始建立webpack
 
