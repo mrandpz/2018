@@ -158,6 +158,8 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
   `use`  
   属性，表示进行转换时，应该使用哪个 loader。
 
+* watch:true 对编辑代码进行监听刷新
+
 * html-webpack-plugin  生成html文件，有设置标题，类似ejs语法等参数
 
 ```
