@@ -220,7 +220,7 @@ extrenals:{
 }
 ```
 
-* 有很多入口的时候
+* 有很多入口的时候 output 参数要注意
 
 ```
 entry:{
@@ -228,6 +228,9 @@ entry:{
     more:[__dirname+'路径/a.js','路径/b.js'],
     v:[jquery] //表示从依赖包中加载
 }
+output:{
+    filename:'js/[name].js'
+},
 在plugin中
 plugins:[
     new webpack.ProvidePlugin({
