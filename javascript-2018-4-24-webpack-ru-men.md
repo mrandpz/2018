@@ -177,7 +177,21 @@ var extractCSS = new ExtractTextPlugin('../css/[name].css')
 }
 ```
 
-* js  ugli
+* js压缩  uglifyjs-webpack-plugin 参数很多[https://www.npmjs.com/package/uglifyjs-webpack-plugin](https://www.npmjs.com/package/uglifyjs-webpack-plugin)
+
+```
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+ 
+module.exports = {
+  plugins: [
+    new UglifyJsPlugin()
+  ]
+}
+
+new webpack.optimize.UglifyJsPlugin({
+  配置参数
+})
+```
 
 
 
