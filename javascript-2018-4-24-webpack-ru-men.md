@@ -36,6 +36,7 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
 * npm init -y
 * cnpm install --save-dev webpack  安装本地webpack依赖
 * 简单输出 webpack 某个文件 输出到某个文件
+* 四个核心概念： 1 入口\(entry\) 2输出\(output\) 3 loader 4 插件\(plugins\)
 
 二、开始建立webpack
 
@@ -103,10 +104,10 @@ module.exports = {
 
 * css 分离 安装  extract-text-webpack-plugin  引入
 
-* `test`
+* `test`  
   属性，用于标识出应该被对应的 loader 进行转换的某个或某些文件
 
-  `use`
+  `use`  
   属性，表示进行转换时，应该使用哪个 loader。
 
 
