@@ -197,5 +197,23 @@ new webpack.optimize.UglifyJsPlugin({
 })
 ```
 
+* 公共js处理 类似于jquery等
+
+```
+entry中引入jquery
+entry:{
+    app:'普通js',
+    v:[jquery] //表示从依赖包中加载
+}
+在plugin中
+plugins:[
+    new webpack.ProvidePlugin({
+        $:'jquery'  
+    })
+]
+```
+
+
+
 
 
