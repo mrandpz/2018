@@ -45,10 +45,7 @@ uglifyjs index.js -m(混淆) -o(压缩) index.min.js
     app: './src/app.js',
     vendors: './src/vendors.js'
   }
-  
 ```
-
-
 
 二、开始建立webpack
 
@@ -117,11 +114,47 @@ module.exports = {
 
 * css 分离 安装  extract-text-webpack-plugin  引入
 
+```
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin("styles.css"),
+  ]
+}
+use:指需要什么样的loader去编译文件,这里由于源文件是.css所以选择css-loader
+fallback:编译后用什么loader来提取css文件
+publicfile:用来覆盖项目路径,生成该css文件的文件路径
+
+
+改变css输出路径
+var extractCSS = new ExtractTextPlugin('../css/[name].css')
+{
+        test: /\.css$/,
+        use: extractCSS.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      }
+
+```
+
 * `test`  
   属性，用于标识出应该被对应的 loader 进行转换的某个或某些文件
 
   `use`  
   属性，表示进行转换时，应该使用哪个 loader。
 
+* 
 
 
