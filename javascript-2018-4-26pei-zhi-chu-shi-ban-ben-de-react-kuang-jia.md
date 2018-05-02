@@ -6,8 +6,7 @@
 
 ```
 //devDependencies
-babel-core 
-
+babel-core
 ```
 
 babel-core 的作用是把 js 代码分析成 ast ，方便各个插件分析语法进行相应的处理。有些新语法在低版本 js 中是不存在的，如箭头函数，rest 参数，函数默认值等，这种语言层面的不兼容只能通过将代码转为 ast，分析其语法后再转为低版本 js。
@@ -73,4 +72,85 @@ Babel 几乎可以编译所有时新的 JavaScript 语法，但对于 APIs 来�
 但 babel-runtime 也有问题，第一，很不方便，第二，在代码中中直接引入 helper 函数，意味着不能共享，造成最终打包出来的文件里有很多重复的 helper 代码。所以，babel 又开发了 babel-plugin-transform-runtime，这个模块会将我们的代码重写，如将 Promise 重写成 \_Promise（只是打比方），然后引入\_Promise helper 函数。这样就避免了重复打包代码和手动引入模块的痛苦。
 
 7.babel-plugin-transform-decorators-legacy 装饰器修饰类
+
+8.`babel-runtime`
+
+那什么时候用`babel-polyfill`什么时候用`babel-runtime`呢？如果你不介意污染全局变量（如上面提到的业务代码），放心大胆地用`babel-polyfill`；而如果你在写模块，为了避免污染使用者的环境，没的选，只能用`babel-runtime`+`babel-plugin-transform-runtime`。
+
+9 css-loader
+
+10.
+
+```
+file-loader
+less-loader
+style-loader
+url-loader
+webpack
+webpack-dev-middleware
+webpack-hot-middleware
+less
+koa
+koa-router
+```
+
+11.
+
+```
+//dependencies
+prop-types  // react 校验
+react
+react-dom
+```
+
+12. 写完依赖后，试着启动一个服务
+
+```
+│  .babelrc                      //babel配置文件
+│  package.json
+│  README.md
+│
+├─server                         //存放服务端代码文件
+│  │  server.js                  //开启http服务
+│  │
+│  └─middleware
+│          devMiddleware.js      //koa中间件，可以让webpack-dev-middleware配合koa使用
+│          hotMiddleware.js      
+│
+├─src                            //存放前端业务代码文件
+│  │  index.js                   //前端页面入口文件
+│  │
+│  ├─assets                      //前端静态资源目录
+│  │      index.html             
+│  │
+│  └─components                  //存放你的react组件
+│          App.js
+│          app.less
+│
+└─webpack                       //存放webpack配置文件
+        webpack.config.js
+```
+
+13.新建 .babelrc 文件
+
+```
+{
+	"presets":[
+		[
+			"laster",
+			{
+				modules:false
+			}
+		],
+		"stage-0",
+		"react"
+	],
+	"plugins":[
+		"transform-time",
+		"transform-decorators-legacy"
+	]
+}
+```
+
+14.建立一个server 文件夹，并且建立一个server.js 文件
 
