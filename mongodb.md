@@ -279,19 +279,120 @@ db.col.find({"likes" : {$gt : 100}})
 Select * from col where likes > 100;
 ```
 
+16. $type 操作符
 
+$type操作符是基于BSON类型来检索集合中匹配的数据类型，并返回结果。
 
+具体[查询值](http://www.runoob.com/mongodb/mongodb-operators-type.html)，
 
+```
+db.col.find({"title" : {$type : 2}})
+```
 
+17. limit 接收一个数字参数
 
+```
+db.COLLECTION_NAME.find().limit(NUMBER)
+```
 
+```
+db.col.find({},{"title":1,_id:0}).limit(2)
+```
 
+18. sort基本语法 
 
+```
+db.COLLECTION_NAME.find().sort({KEY:1})
+```
 
+```
+db.col.find({},{"title":1,_id:0}).sort({"likes":-1})
+```
 
+19. 索引  
 
+```
+db.COLLECTION_NAME.ensureIndex({KEY:1})
+```
 
+```
+db.col.ensureIndex({"title":1})
+```
 
+ensureIndex\(\) 方法中你也可以设置使用多个字段创建索引（关系型数据库中称作复合索引）。
+
+```
+db.col.ensureIndex({"title":1,"description":-1})
+```
+
+20.聚合
+
+```
+MongoDB中聚合(aggregate)主要用于处理数据(诸如统计平均值,求和等)，并返回计算后的数据结果。有点类似sql语句中的 count(*)。
+```
+
+```
+db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)
+```
+
+示例
+
+```
+db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}])
+```
+
+管道
+
+```
+db.article.aggregate(
+    { $project : {
+        title : 1 ,
+        author : 1 ,
+    }}
+ );
+```
+
+这样的话结果中就只还有\_id,tilte和author三个字段了，默认情况下\_id字段是被包含的，如果要想不包含\_id话可以这样:
+
+```
+db.article.aggregate(
+    { $project : {
+        _id : 0 ,
+        title : 1 ,
+        author : 1
+    }});
+```
+
+mongoDB 分片 不懂
+
+备份与恢复
+
+```
+mongodump -h dbhost -d dbname -o dbdirectory
+```
+
+```
+-h：
+MongDB所在服务器地址，例如：127.0.0.1，当然也可以指定端口号：127.0.0.1:27017
+
+-d：
+需要备份的数据库实例，例如：test
+
+-o：
+备份的数据存放位置，例如：c:\data\dump，当然该目录需要提前建立，在备份完成后，系统自动在dump目录下建立一个test目录，这个目录里面存放该数据库实例的备份数据。
+```
+
+执行命令
+
+```
+mongodump
+```
+
+数据恢复 mongorestore
+
+```
+mongorestore -h <hostname><:port> -d dbname <path>
+```
 
 
 
