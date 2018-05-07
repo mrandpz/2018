@@ -4,7 +4,7 @@
 mongod --dbpath d:\data\db
 ```
 
-2.bin目录下执行 
+2.bin目录下执行
 
 ```
 mongo.exe
@@ -40,6 +40,28 @@ use xxx
 
 ```
 db.dropDatabase()
+```
+
+7.删除集合
+
+```
+show tables 显示当前数据库的表
+db.site.drop() 删除集合site
+```
+
+8 创建集合
+
+```
+db.createCollection(name, options)
+```
+
+* options: 可选参数, 指定有关内存大小及索引的选项
+* name: 要创建的集合名称
+
+创建固定集合 mycol，整个集合空间大小 6142800 KB, 文档最大个数为 10000 个。
+
+```
+db.createCollection("mycol", { capped : true, autoIndexId : true, size :6142800, max : 10000 } )
 ```
 
 
