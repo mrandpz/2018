@@ -14,4 +14,5 @@
 * [mongoDB](mongodb.md)
 * [docker](docker.md)
 * [编写高质量的代码](bian-xie-gao-zhi-liang-de-dai-ma.md)
+* [npm 发布一个react组件](npm-fa-bu-yi-ge-react-zu-jian.md)
 
