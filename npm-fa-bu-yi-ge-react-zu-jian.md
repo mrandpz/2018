@@ -122,7 +122,6 @@ class Hello extends Component {
 
 
 export default Hello;
-
 ```
 
 8：执行npm run build 生成 bundle.js文件
@@ -140,7 +139,19 @@ export default Hello;
 
 # part2
 
+因为我们在特定的环境下处理代码，不可能把所有的包都打包进去，比如react.js 就不应该被打包进去
 
+加上webpack的externals参数
+
+```
+externals: {
+    'react': 'React',
+    'React': 'React',
+    'ReactDOM': 'ReactDOM',
+    'react-dom': 'ReactDOM',
+    'antd': 'antd',
+},
+```
 
 
 
