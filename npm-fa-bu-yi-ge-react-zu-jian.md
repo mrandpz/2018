@@ -1,11 +1,11 @@
-1:npm init  
+1：npm init 生成一个package.json
 
 ```
 {
-  "name": "babaloveyou",
-  "version": "1.0.0",
+  "name": "babaloveyou",  #发布到npm仓库的包名 供别人下载 npm i babaloveyou
+  "version": "1.0.0",     #版本号，每次 npm publish 的时候必须修改
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./dist/bunlde.js", #别人引用的入口
   "scripts": {
     "build": "webpack"
   },
@@ -29,5 +29,98 @@
 }
 ```
 
+2：安装本地依赖包
 
+```
+cnpm i webpack webpack-cli @babel/core @babel/preset-env @babel/preset-react babel-loader css-loader style-loader -D
+```
+
+3：安装依赖包
+
+```
+cnpm i react-dom react-dom antd -S
+```
+
+4：创建.babelrc 文件，版本8.0.2 最好根据官网配置 [https://babeljs.io/docs/en/babel-preset-react](https://babeljs.io/docs/en/babel-preset-react "babel官方文档")
+
+```
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+5：创建webpack.config.js
+
+```
+const path = require('path');
+
+module.exports = {
+  mode: 'development',  // 开发环境
+  entry: './src/index.js',   // 打包的入口文件
+  output: {
+    filename: 'index.js',  // 打包后的文件名
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd' // 打包后的文件兼容 common.js 和 cmd
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
+};
+
+```
+
+6：创建src文件夹，在src文件夹下创建index.js 文件
+
+```
+import Hello from './Hello';
+
+export default Hello;
+```
+
+如果有多个组件文件
+
+```
+import React from 'react';
+import RCmp from './app';
+import Button from './button';
+import Photo from './photo';
+import './app.scss';
+RCmp.Button = Button;
+RCmp.Photo = Photo;
+export default RCmp;
+export {
+  Button,
+  Photo,
+  RCmp,
+}
+
+```
+
+7：hello.js
+
+```
+import React, { Component } from 'react';
+
+import './Hello.css';  //  css样式
+
+class Hello extends Component {
+  render () {
+    return (
+      <h1>hello，babaloveyou</h1>
+    )
+  }
+}
+```
+
+8：执行npm run build
 
