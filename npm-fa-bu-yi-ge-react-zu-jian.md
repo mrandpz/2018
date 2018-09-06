@@ -76,7 +76,6 @@ module.exports = {
     ]
   },
 };
-
 ```
 
 6：创建src文件夹，在src文件夹下创建index.js 文件
@@ -103,7 +102,6 @@ export {
   Photo,
   RCmp,
 }
-
 ```
 
 7：hello.js
@@ -122,5 +120,16 @@ class Hello extends Component {
 }
 ```
 
-8：执行npm run build
+8：执行npm run build 生成 bundle.js文件
+
+9：因为npm link执行会有莫名其妙的报错，所以这里选择用 yarn link
+
+成功提示
+
+    yarn link v1.5.1
+    success Registered "babaloveyou".
+    info You can now run `yarn link "babaloveyou"` in the projects where you want to use this module and it will be used instead.
+    Done in 0.14s.
+
+10：用 creat-react-app创建一个测试项目，yarn start。执行yarn link "babaloveyou"  即可链接到改模块
 
