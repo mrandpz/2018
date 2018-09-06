@@ -126,7 +126,7 @@ export default Hello;
 
 8：执行npm run build 生成 bundle.js文件
 
-9：因为npm link执行会有莫名其妙的报错，所以这里选择用 yarn link
+9：因为npm link执行会有莫名其妙的报错忽略，或者可以选择用 yarn link
 
 成功提示
 
