@@ -108,16 +108,21 @@ export {
 
 ```
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import './Hello.css';  //  css样式
+import './Hello.css';
 
 class Hello extends Component {
   render () {
     return (
-      <h1>hello，babaloveyou</h1>
-    )
+      <h3>Hello</h3>
+    );
   }
 }
+
+
+export default Hello;
+
 ```
 
 8：执行npm run build 生成 bundle.js文件
@@ -131,5 +136,11 @@ class Hello extends Component {
     info You can now run `yarn link "babaloveyou"` in the projects where you want to use this module and it will be used instead.
     Done in 0.14s.
 
-10：用 creat-react-app创建一个测试项目，yarn start。执行yarn link "babaloveyou"  即可链接到改模块
+10：用 creat-react-app创建一个测试项目，yarn start。执行yarn link "babaloveyou"  即可链接到该模块，即可像正常方式引入改模块，调试完成之后publish
+
+# part2
+
+
+
+
 
