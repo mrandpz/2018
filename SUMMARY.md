@@ -4,8 +4,8 @@
 * [JavaScript高级程序设计](javascriptgao-ji-cheng-xu-she-ji.md)
 * [JavaScript-2018-4-21](javascriptti-mu.md)
 * [JavaScript-2018-4-22](javascriptti-76ee-2018-4-22.md)
-* [JavaScript-2018-4-23-函数柯里化的三个应用](han-shu-ke-li-hua-de-san-ge-ying-yong.md)
 * [JavaScript-2018-4-24-npm 包管理 ](npm-bao-guan-li.md)
+* [JavaScript-2018-4-23-函数柯里化的三个应用](han-shu-ke-li-hua-de-san-ge-ying-yong.md)
 * [JavaScript-2018-4-25.28-webpack 入门](javascript-2018-4-24-webpack-ru-men.md)
 * [JavaScript--配置初始版本的react框架](javascript-2018-4-26pei-zhi-chu-shi-ban-ben-de-react-kuang-jia.md)
 * [JavaScript-nodejs 入门](javascript-2018429-2018-51-nodejs-ru-men.md)
@@ -14,4 +14,5 @@
 * [mongoDB](mongodb.md)
 * [docker](docker.md)
 * [编写高质量的代码](bian-xie-gao-zhi-liang-de-dai-ma.md)
+* [用npm发布一个react组件](yong-npm-fabu-yi-ge-react-zu-jian.md)
 
