@@ -15,4 +15,5 @@
 * [docker](docker.md)
 * [编写高质量的代码](bian-xie-gao-zhi-liang-de-dai-ma.md)
 * [npm 发布一个react组件](npm-fa-bu-yi-ge-react-zu-jian.md)
+* [设计模式初体验](she-ji-mo-shi-chu-ti-yan.md)
 
