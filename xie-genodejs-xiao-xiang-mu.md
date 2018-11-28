@@ -9,7 +9,7 @@ nvm nodejs 版本切换
 nodejs基础
 
 * nodejs http模块，创建server。并为用户发送内容
-* fs模块，读写文件等 
+* fs模块，读写文件重命名等等等 
 
 
 
