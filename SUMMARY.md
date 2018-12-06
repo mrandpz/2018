@@ -17,4 +17,5 @@
 * [npm 发布一个react组件](npm-fa-bu-yi-ge-react-zu-jian.md)
 * [设计模式初体验](she-ji-mo-shi-chu-ti-yan.md)
 * [写个nodejs小项目](xie-genodejs-xiao-xiang-mu.md)
+* [Nginx](nginx.md)
 
