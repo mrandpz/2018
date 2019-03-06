@@ -130,9 +130,7 @@ export default Hello;
 
 然后在对应项目执行 npm link  babaloveyou
 
-
-
-或者可以选择用 yarn link 
+或者可以选择用 yarn link
 
 成功提示
 

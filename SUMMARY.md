@@ -19,4 +19,6 @@
 * [写个nodejs小项目](xie-genodejs-xiao-xiang-mu.md)
 * [Nginx](nginx.md)
 * [webpack](webpack.md)
+* [webpack4.27，react16，ts](webpack427react16ts.md)
+* [Jenkins](jenkins.md)
 
