@@ -27,11 +27,11 @@
 |   |-- compatibility.less                   提供兼容样式改placeholder
 |   |-- iconfont.less                        处理icon的样式
 |   |-- index.less                           引入其他mixin
-|   |-- motion.less                        动画效果
+|   |-- motion.less                          动画效果
 |   |-- reset.less                           初始化元素 
-|   |-- size.less                             提供快速生成长宽，和同时生成长款的mixins
+|   |-- size.less                            提供快速生成长宽，和同时生成长款的mixins
 |-- themes
-    |-- default.less                          默认主题，默认字体大小，默认颜色，默认间隔等等参数
+    |-- default.less                         默认主题，默认字体大小，默认颜色，默认间隔等等参数
 ```
 
 
