@@ -11,8 +11,8 @@
 |   |-- colors.less                          引入color.less 生成基础的颜色库             
 |   |-- tinyColor.less                       tinycolor处理颜色和颜色之间的转换
 |-- core
-|   |-- base.less
-|   |-- iconfont.less
+|   |-- base.less                            元素的规范化
+|   |-- iconfont.less                        引入了mixins的iconfont和theme 
 |   |-- index.less                            引入base，mixins，iconfont，和motion文件
 |   |-- motion.less
 |   |-- motion
