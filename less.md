@@ -22,12 +22,12 @@
 |       |-- slide.less
 |       |-- swing.less
 |       |-- zoom.less
-|-- mixins
-|   |-- clearfix.less
-|   |-- compatibility.less                    提供兼容样式改placeholder
-|   |-- iconfont.less
-|   |-- index.less                            引入其他mixin
-|   |-- motion.less
+|-- mixins                    系统中会大量使用到的重复样式
+|   |-- clearfix.less                        清除浮动
+|   |-- compatibility.less                   提供兼容样式改placeholder
+|   |-- iconfont.less                        处理icon的样式
+|   |-- index.less                           引入其他mixin
+|   |-- motion.less                            
 |   |-- reset.less
 |   |-- size.less                             提供快速生成长宽，和同时生成长款的mixins
 |-- themes
