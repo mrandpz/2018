@@ -3,7 +3,7 @@
 ```
 |-- index.less                               引入主题和核心代码  @import './themes/default';   @import './core/index';
 |-- index.tsx                                这是一个入口， import './index.less'
-|-- v2-compatible-reset.less                 重置系统默认的样式
+|-- v2-compatible-reset.less                 统一浏览器元素边距和填充的设置，初始化样式在base.less
 |-- v2-compatible-reset.tsx
 |-- color                                    基础颜色库
 |   |-- bezierEasing.less                    创建贝克塞尔曲线的函数
